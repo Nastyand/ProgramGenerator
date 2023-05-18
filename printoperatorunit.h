@@ -5,8 +5,8 @@
 class PrintOperatorUnit : public Unit
 {
     public:
-        explicit PrintOperatorUnit( const std::string& text ) : m_text( text ) { }
-//        std::string compile( unsigned int level = 0 ) const;
+        explicit PrintOperatorUnit( const std::string& text ) : m_text( text ){}
+        std::string GetText()const{return m_text;}
     private:
         std::string m_text;
 };

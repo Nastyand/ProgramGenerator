@@ -7,9 +7,9 @@ SOURCES += main.cpp \
     unit.cpp \
     classunit.cpp \
     methodunit.cpp \
-    printoperatorunit.cpp \
-    abstractfactory.cpp \
-    classunitcpp.cpp
+    classunitcpp.cpp \
+    methodunitcpp.cpp \
+    printoperatorunitcpp.cpp
 
 HEADERS += \
     unit.h \
@@ -17,4 +17,7 @@ HEADERS += \
     methodunit.h \
     printoperatorunit.h \
     abstractfactory.h \
-    classunitcpp.h
+    classunitcpp.h \
+    methodunitcpp.h \
+    printoperatorunitcpp.h \
+    factorycpp.h
