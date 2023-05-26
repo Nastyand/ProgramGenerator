@@ -6,7 +6,10 @@ class PrintOperatorUnitCpp: public PrintOperatorUnit
 {
 public:
     PrintOperatorUnitCpp( const std::string& text ):PrintOperatorUnit(text){}
-    std::string compile( unsigned int level = 0 ) const;
+    std::string compile( unsigned int level = 0 ) const
+    {
+        return generateShift( level ) + "printf( \"" + GetText() + "\" );\n";
+    }
 };
 
 #endif // PRINTOPERATORUNITCPP_H

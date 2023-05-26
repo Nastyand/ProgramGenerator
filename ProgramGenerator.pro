@@ -6,10 +6,10 @@ CONFIG -= qt
 SOURCES += main.cpp \
     unit.cpp \
     classunit.cpp \
-    methodunit.cpp \
     classunitcpp.cpp \
     methodunitcpp.cpp \
-    printoperatorunitcpp.cpp
+    classunitcsharp.cpp \
+    methodunitcsharp.cpp
 
 HEADERS += \
     unit.h \
@@ -20,4 +20,8 @@ HEADERS += \
     classunitcpp.h \
     methodunitcpp.h \
     printoperatorunitcpp.h \
-    factorycpp.h
+    factorycpp.h \
+    classunitcsharp.h \
+    methodunitcsharp.h \
+    printoperatorunitcsharp.h \
+    factorycsharp.h

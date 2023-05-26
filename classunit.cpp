@@ -14,4 +14,4 @@ void ClassUnit::add( const std::shared_ptr< Unit >& unit, Flags flags )
 }
 
 
-const std::vector< std::string > ClassUnit::ACCESS_MODIFIERS = { "public","protected", "private" };
+const std::vector< std::string > ClassUnit::ACCESS_MODIFIERS = { "public","protected", "private", "private protected","internal","protected internal"};

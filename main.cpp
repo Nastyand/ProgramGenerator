@@ -4,6 +4,7 @@
 #include "printoperatorunit.h"
 #include "abstractfactory.h"
 #include "factorycpp.h"
+#include "factorycsharp.h"
 
 std::string generateProgram(std::shared_ptr<AbstractFactory> factory)
 {
@@ -22,5 +23,6 @@ std::string generateProgram(std::shared_ptr<AbstractFactory> factory)
 int main()
 {
     std::cout << generateProgram(std::make_shared<FactoryCpp>()) << std::endl;
+    std::cout << generateProgram(std::make_shared<FactoryCSharp>()) << std::endl;
     return 0;
 }

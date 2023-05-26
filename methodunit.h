@@ -14,7 +14,10 @@ class MethodUnit : public Unit
         };
     public:
         MethodUnit( const std::string& name, const std::string& returnType, Flags flags ) :m_name( name ), m_returnType( returnType ), m_flags( flags ){}
-        void add( const std::shared_ptr< Unit >& unit, Flags /* flags */ = 0 );
+        void add( const std::shared_ptr< Unit >& unit, Flags /* flags */ = 0 )
+        {
+            m_body.push_back( unit );
+        }
         std::string GetName()const{return m_name;}
         std::string GetType()const{return m_returnType;}
         Flags GetFlags()const{return m_flags;}
