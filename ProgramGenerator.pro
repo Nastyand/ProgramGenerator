@@ -9,7 +9,9 @@ SOURCES += main.cpp \
     classunitcpp.cpp \
     methodunitcpp.cpp \
     classunitcsharp.cpp \
-    methodunitcsharp.cpp
+    methodunitcsharp.cpp \
+    classunitjava.cpp \
+    methodunitjava.cpp
 
 HEADERS += \
     unit.h \
@@ -24,4 +26,8 @@ HEADERS += \
     classunitcsharp.h \
     methodunitcsharp.h \
     printoperatorunitcsharp.h \
-    factorycsharp.h
+    factorycsharp.h \
+    classunitjava.h \
+    methodunitjava.h \
+    printoperatorunitjava.h \
+    factoryjava.h

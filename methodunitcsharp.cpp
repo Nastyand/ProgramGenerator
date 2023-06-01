@@ -10,9 +10,9 @@ std::string MethodUnitCSharp::compile( unsigned int level ) const
     }
     result += GetType() + " ";
     result += GetName() + "()";
-    if( GetFlags() & CONST ) {
-        result += " const";
-    }
+//    if( GetFlags() & CONST ) {
+//        result += " const";
+//    }
     result += " {\n";
     for( const auto& b : GetBody() ) {
         result += b->compile( level +2 );

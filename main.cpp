@@ -5,13 +5,14 @@
 #include "abstractfactory.h"
 #include "factorycpp.h"
 #include "factorycsharp.h"
+#include "factoryjava.h"
 
 std::string generateProgram(std::shared_ptr<AbstractFactory> factory)
 {
     auto myClass = factory->CreateClass("MyClass");
     myClass->add(factory->CreateMethod( "testFunc1", "void", 0 ),ClassUnit::PUBLIC);
     myClass->add(factory->CreateMethod( "testFunc2", "void", MethodUnit::STATIC ),ClassUnit::PRIVATE);
-    myClass->add(factory->CreateMethod(  "testFunc3", "void", MethodUnit::VIRTUAL | MethodUnit::CONST ),ClassUnit::PUBLIC);
+    myClass->add(factory->CreateMethod(  "testFunc3", "void", MethodUnit::VIRTUAL | MethodUnit::CONST),ClassUnit::PUBLIC);
 
     std::shared_ptr< MethodUnit > method = factory->CreateMethod( "testFunc4", "void", MethodUnit::STATIC );
     method->add( factory->CreatePrintOperator( R"(Hello, world!\n)" ) );
@@ -24,5 +25,6 @@ int main()
 {
     std::cout << generateProgram(std::make_shared<FactoryCpp>()) << std::endl;
     std::cout << generateProgram(std::make_shared<FactoryCSharp>()) << std::endl;
+    std::cout << generateProgram(std::make_shared<FactoryJava>()) << std::endl;
     return 0;
 }
