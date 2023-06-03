@@ -8,7 +8,7 @@ public:
     PrintOperatorUnitCpp( const std::string& text ):PrintOperatorUnit(text){}
     std::string compile( unsigned int level = 0 ) const
     {
-        return generateShift( level ) + "printf( \"" + GetText() + "\" );\n";
+        return generateShift( level ) + "printf( \"" + m_text + "\" );\n";
     }
 };
 

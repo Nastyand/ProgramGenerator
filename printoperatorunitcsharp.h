@@ -8,7 +8,7 @@ public:
     PrintOperatorUnitCSharp( const std::string& text ):PrintOperatorUnit(text){}
     std::string compile( unsigned int level = 0 ) const
     {
-        return generateShift( level ) + "Console.WriteLine( \"" + GetText() + "\" );\n";
+        return generateShift( level ) + "Console.WriteLine( \"" + m_text + "\" );\n";
     }
 };
 

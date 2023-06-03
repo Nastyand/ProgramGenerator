@@ -8,7 +8,7 @@ public:
     PrintOperatorUnitJava( const std::string& text ):PrintOperatorUnit(text){}
     std::string compile( unsigned int level = 0 ) const
     {
-        return generateShift( level ) + "System.out.println( \"" + GetText() + "\" );\n";
+        return generateShift( level ) + "System.out.println( \"" + m_text + "\" );\n";
     }
 };
 #endif // PRINTOPERATORUNITJAVA_H

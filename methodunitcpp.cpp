@@ -3,19 +3,19 @@
 std::string MethodUnitCpp::compile( unsigned int level ) const
 {
     std::string result = generateShift( level );
-    if( GetFlags() & STATIC ) {
+    if( m_flags & STATIC ) {
         result += "static ";
     }
-    else if( GetFlags() & VIRTUAL ) {
+    else if( m_flags & VIRTUAL ) {
         result += "virtual ";
     }
-    result += GetType() + " ";
-    result += GetName() + "()";
-    if( GetFlags() & CONST ) {
+    result += m_returnType + " ";
+    result += m_name + "()";
+    if( m_flags & CONST ) {
         result += " const";
     }
     result += " {\n";
-    for( const auto& b : GetBody() ) {
+    for( const auto& b : m_body) {
         result += b->compile( level + 1 );
     }
     result += generateShift( level ) + "}\n";

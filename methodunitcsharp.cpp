@@ -2,19 +2,16 @@
 std::string MethodUnitCSharp::compile( unsigned int level ) const
 {
     std::string result = generateShift( level );
-    if( GetFlags() & STATIC ) {
+    if( m_flags & STATIC ) {
         result += "static ";
     }
-    else if( GetFlags() & VIRTUAL ) {
+    else if( m_flags & VIRTUAL ) {
         result += "virtual ";
     }
-    result += GetType() + " ";
-    result += GetName() + "()";
-//    if( GetFlags() & CONST ) {
-//        result += " const";
-//    }
+    result += m_returnType + " ";
+    result += m_name + "()";
     result += " {\n";
-    for( const auto& b : GetBody() ) {
+    for( const auto& b : m_body ) {
         result += b->compile( level +2 );
     }
     result += generateShift( level+1 ) + "}\n";
