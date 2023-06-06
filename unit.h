@@ -7,13 +7,12 @@
 class Unit
 {
     public:
-        using Flags = unsigned int;
-    public:
-        virtual ~Unit() = default;
-        virtual void add( const std::shared_ptr< Unit >& , Flags );
-        virtual std::string compile( unsigned int level = 0 ) const = 0;
+        using Flags = unsigned int;//определяем псевдоним для типа unsigned int
+        virtual ~Unit() = default;//деструктор
+        virtual void add( const std::shared_ptr< Unit >&, Flags );//добавление вложенных элементов
+        virtual std::string compile( unsigned int level = 0 ) const = 0;//генерация кода
     protected:
-        virtual std::string generateShift( unsigned int level ) const;
+        virtual std::string generateShift( unsigned int level ) const;//возвращает нужное число пробелов
 };
 
 #endif // UNIT_H
