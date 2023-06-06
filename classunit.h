@@ -15,10 +15,7 @@ class ClassUnit : public Unit
             INTERNAL,
             PROTECTED_INTERNAL
         };
-        static const std::vector< std::string > ACCESS_MODIFIERS;
-        explicit ClassUnit( const std::string& name );
-        void add( const std::shared_ptr< Unit >& unit, Flags flags );
-
+        explicit ClassUnit( const std::string& name ):m_name( name ){}
     protected:
         std::string m_name;
         std::vector< Fields > m_fields;

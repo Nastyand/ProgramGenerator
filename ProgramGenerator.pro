@@ -5,7 +5,6 @@ CONFIG -= qt
 
 SOURCES += main.cpp \
     unit.cpp \
-    classunit.cpp \
     classunitcpp.cpp \
     methodunitcpp.cpp \
     classunitcsharp.cpp \

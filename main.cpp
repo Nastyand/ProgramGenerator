@@ -23,8 +23,11 @@ std::string generateProgram(std::shared_ptr<AbstractFactory> factory)
 
 int main()
 {
+    std::cout<<"c++ program generation\n"<<std::endl;
     std::cout << generateProgram(std::make_shared<FactoryCpp>()) << std::endl;
+    std::cout<<"c# program generation\n"<<std::endl;
     std::cout << generateProgram(std::make_shared<FactoryCSharp>()) << std::endl;
+    std::cout<<"java program generation\n"<<std::endl;
     std::cout << generateProgram(std::make_shared<FactoryJava>()) << std::endl;
     return 0;
 }
