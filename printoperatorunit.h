@@ -5,7 +5,7 @@
 class PrintOperatorUnit : public Unit
 {
     public:
-        explicit PrintOperatorUnit( const std::string& text ) : m_text( text ){}//конструктор
+        PrintOperatorUnit( const std::string& text ): m_text( text ){}//конструктор
     protected:
         std::string m_text;//текст вывода на экран
 };

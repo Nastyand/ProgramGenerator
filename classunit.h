@@ -15,7 +15,7 @@ public:
         INTERNAL,
         PROTECTED_INTERNAL
     };
-    explicit ClassUnit( const std::string& name ):m_name( name ){}//конструктор
+    ClassUnit( const std::string& name ): m_name( name ){}//конструктор
 protected:
     std::string m_name;//имя класса
     std::vector< Fields > m_fields;//вектор векторов Fields

@@ -18,7 +18,7 @@ std::string ClassUnitCpp::compile( unsigned int level ) const
 void ClassUnitCpp::add( const std::shared_ptr< Unit >& unit, Flags flags )
 {
     int accessModifier = PRIVATE;//по умолчанию PRIVATE
-    if( flags < ACCESS_MODIFIERS.size() ) {//если флаг меньше векора модификаторов
+    if( flags < ACCESS_MODIFIERS.size() ) {//если флаг меньше векора модификаторов(если такой модификатор существует)
         accessModifier = flags;//выбираем этот модификатор
     }
     m_fields[ accessModifier ].push_back(unit);//добавляем unit в ветор m_fields
