@@ -21,6 +21,11 @@ std::string generateProgram(std::shared_ptr<AbstractFactory> factory)
     method->add( factory->CreatePrintOperator( R"(Hello, world!\n)" ) );
     //добавляем этот метод в класс
     myClass->add( method, ClassUnit::PROTECTED );
+    //std::shared_ptr< PrintOperatorUnit > printer;
+    //printer = factory->CreatePrintOperator(R"(Hello\n)");
+    //printer->add(method, ClassUnit::PROTECTED);
+    //printer->add(myClass,ClassUnit::PUBLIC);
+
     //генерируем код данного класса
     return myClass->compile();
 }
