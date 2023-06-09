@@ -9,5 +9,5 @@
 В нашем случае имеются три класса: ClassUnit, MethodUnit, PrintOperatorUnit, которые являются абстрактными классами для объектов, реализованных для некоторых групп. Группами в данном случае являются языки программирования c++, c# и java. И для каждой группы созданы конкретные объекты, например, для языка c++ это классы: ClassUnitCpp, MethodUnitСpp, PrintOperatorUnitСpp, аналогично для языков c# и java.
 Также в данной програме есть класс AbstractFactory и производные от него фабрики, создающие конкретные объекты: FactoryCpp, FactoryCSharp, FactoryJava.
 
-![abstract factory (1).jpg](https://github.com/Nastyand/ProgramGenerator/blob/master/abstract%20factory%20(1).jpg)
+![abstract factory (2).jpg](https://github.com/Nastyand/ProgramGenerator/blob/master/abstract%20factory%20(2).jpg)
 
